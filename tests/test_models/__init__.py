@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-"""Initializes tests.
+"""Initializes sdjfn tests.
 """

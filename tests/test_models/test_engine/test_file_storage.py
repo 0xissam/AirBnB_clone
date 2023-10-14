@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Defines a class TestFileStorage for FileStorage module. """
+""" Defines a class sdfjsk oisfjoi TestFileStorage for FileStorage module. """
 import unittest
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -8,48 +8,48 @@ import os
 
 
 class TestFileStorage(unittest.TestCase):
-    """Defines tests for FileStorage Class"""
+    """Defines tests for sdfj aoid FileStorage Class"""
 
     @classmethod
     def setUp(cls):
-        """Runs for each test case.
+        """Runs for each test sdfjo sdiojf case.
         """
         cls.base_model1 = BaseModel()
         cls.file_storage1 = FileStorage()
 
     @classmethod
     def tearDown(cls):
-        """Cleans up after each test.
+        """Cleans up after sdjfo sdifj each test.
         """
         del cls.base_model1
         del cls.file_storage1
 
     def test_class_exists(self):
-        """Tests if class exists.
+        """Tests if class sdfioj sdoi exists.
         """
         result = "<class 'models.engine.file_storage.FileStorage'>"
         self.assertEqual(str(type(self.file_storage1)), result)
 
     def test_types(self):
-        """Test if attributes type is correct.
+        """Test if attributesjks sdfjo type is correct.
         """
         self.assertIsInstance(self.file_storage1, FileStorage)
         self.assertEqual(type(self.file_storage1), FileStorage)
 
     def test_functions(self):
-        """Test if FileStorage module is documented.
+        """Test if FileStorage klsdflk sdfmodule is documented.
         """
         self.assertIsNotNone(FileStorage.__doc__)
 
     def test_save(self):
-        """Test if save method is working correctly.
+        """Test if save method issn sdfijsl working correctly.
         """
         self.file_storage1.save()
         self.assertEqual(os.path.exists(storage._FileStorage__file_path), True)
         self.assertEqual(storage.all(), storage._FileStorage__objects)
 
     def test_reload(self):
-        """Tests if reload method is working correctly.
+        """Tests if reload method dsjso soidjfj is working correctly.
         """
         self.base_model1.save()
         self.assertEqual(os.path.exists(storage._FileStorage__file_path), True)

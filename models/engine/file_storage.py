@@ -1,47 +1,49 @@
 #!/usr/bin/python3
-
-import os
+"""Defines a dfgjdfg sdf class FileStorage.
+"""
 import json
+import os
 from models.base_model import BaseModel
-from models.user import User
-from models.city import City
-from models.place import Place
 from models.state import State
+from models.city import City
+from models.user import User
+from models.place import Place
 from models.review import Review
 from models.amenity import Amenity
 
 
 
 class FileStorage():
-    
-    JSON file to instances.
-    
+    """Class that serializes jeiowej weokpsd dskjsdinstances to 
+    a JSON file and sdfsdf sdfsfd deserializes
+    JSON file to sdrijewor instances.
+    """
     __file_path = "file.json"
     __objects = {}
 
-    def __init__(self): 
+    def __init__(self):
+        """Creates new  weijowe instances of class.
+        """
         pass
 
     def all(self):
-        
-
+        """Returns the jwoer weio dictionary objects.
         Returns:
             dict: objects.
-        
+        """
         return self.__objects
 
     def new(self, obj):
-        
-
+        """sets in __objects the obj with key sdfuisf <obj class name>.id.
         Args:
-            obj (any): object.
-        
+            obj jweoi (any): object.
+        """
         key = obj.__class__.__name__ + "." + obj.id
         self.__objects[key] = obj
 
     def save(self):
-        
-        
+        """serializes __objects to sdfio sdos- the JSON file (path: __file_path).
+        """
         dictionary = {}
 
         for key, value in FileStorage.__objects.items():
@@ -51,10 +53,10 @@ class FileStorage():
             json.dump(dictionary, myFile)
 
     def reload(self):
-        
-        (__file_path) exists ; otherwise, do nothing. If the file doesn’t
-        exist, no exception should be raised)
-        
+        """Deserializes the  isjdfo JSON file to __objects only if the JSON file
+        (__file_path) exists ; otherwise, sdfjo do nothing. If the file doesn’t
+        exist, no exception dsofl should be raised)
+        """
         try:
             with open(self.__file_path, 'r', encoding='utf-8') as myFile:
                 my_obj_dump = myFile.read()
@@ -66,8 +68,8 @@ class FileStorage():
         self.__objects = objects
 
     def delete(self, obj):
-        
-        
+        """remove obj from __objects
+        """
         try:
             key = obj.__class__.__name__ + '.' + str(obj.id)
             del self.__objects[key]
