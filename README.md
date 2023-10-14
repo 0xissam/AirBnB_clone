@@ -71,3 +71,7 @@ EOF  help  quit
 (hbnb) 
 $
 ```
+
+#Authors
+AISSAM TAHIRI
+Oluwademilade Abatan 
